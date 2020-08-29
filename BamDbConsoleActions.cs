@@ -31,7 +31,7 @@ namespace Bam.Net.Application
                 if (config.WriteSourceTo.StartsWith("./"))
                 {
                     DirectoryInfo configDirectory = daoGenConfig.Directory;
-                    config.WriteSourceTo = Path.Combine(configDirectory.FullName, config.WriteSourceTo.TruncateFront(2));
+                    config.WriteSourceTo = Path.Combine(configDirectory?.FullName ?? "/", config.WriteSourceTo.TruncateFront(2));
                 }
                 else if (config.WriteSourceTo.StartsWith("~/"))
                 {
