@@ -117,7 +117,7 @@ namespace Bam.Net.Application
             FileInfo file = new FileInfo(assemblyPath);
             if (!file.Exists)
             {
-                OutLineFormat("File not found: {0}", ConsoleColor.Magenta, file.FullName);
+                Message.PrintLine("File not found: {0}", ConsoleColor.Magenta, file.FullName);
                 Exit(1);
             }
             string defaultPath = $"./{file.Name}_Dto_Generated/";
@@ -130,7 +130,7 @@ namespace Bam.Net.Application
             if (compile)
             {
                 Assembly result = srcDir.ToAssembly($"{file.Name}_Dtos.dll");
-                OutLineFormat("Created assembly {0}", ConsoleColor.Cyan, result.GetFilePath());
+                Message.PrintLine("Created assembly {0}", ConsoleColor.Cyan, result.GetFilePath());
             }
             if (!keepSource)
             {
