@@ -91,7 +91,7 @@ namespace Bam.Net.Application
             string defaultPath = $"./{schemaName}_Generated";
             DirectoryInfo defaultDir = new DirectoryInfo(defaultPath);
             defaultPath = defaultDir.FullName;
-            string writeTo = GetArgument("writeSrc", $"Please enter the path to write code to (default ({defaultPath}))").Or(defaultPath);
+            string writeTo = GetArgument("writeSourceTo", $"Please enter the path to write code to (default ({defaultPath}))").Or(defaultPath);
             DirectoryInfo writeToDir = new DirectoryInfo(writeTo);
             if (writeToDir.Exists)
             {
@@ -121,7 +121,7 @@ namespace Bam.Net.Application
                 Exit(1);
             }
             string defaultPath = $"./{file.Name}_Dto_Generated/";
-            string sourcePath = GetArgument("writeSrc", $"Please enter the path to write source code to [{defaultPath}]").Or(defaultPath);
+            string sourcePath = GetArgument("writeSourceTo", $"Please enter the path to write source code to [{defaultPath}]").Or(defaultPath);
             bool keepSource = Confirm("Keep source files?");
             bool compile = Confirm("Generate assembly?");
             generator.DaoAssembly = Assembly.LoadFrom(file.FullName);
@@ -156,7 +156,7 @@ namespace Bam.Net.Application
             Type[] types = genInfo.Assembly.GetTypes().Where(t => !t.IsNested &&  !string.IsNullOrEmpty(t.Namespace) && t.Namespace.Equals(genInfo.FromNameSpace)).ToArray();
             T generator = GetGenerator<T>($"{genInfo.ToNameSpace}.dll", types);
             string defaultPath = $"./{genInfo.ToNameSpace}_Protobuf_Generated";
-            string sourcePath = GetArgument("writeSrc", $"Please enter the path to write source code to [{defaultPath}]").Or(defaultPath);
+            string sourcePath = GetArgument("writeSourceTo", $"Please enter the path to write source code to [{defaultPath}]").Or(defaultPath);
             generator.WriteSource(sourcePath);
         }
 
@@ -235,7 +235,7 @@ namespace Bam.Net.Application
                 config = genInfo.ToConfig();
                 config.UseInheritanceSchema = GetArgument("useInheritanceSchema", "Use inheritance schema?").IsAffirmative();
                 config.CheckForIds = GetArgument("checkForIds", "Check for Id field?").IsAffirmative();
-                config.WriteSourceTo = GetArgument("writeSrc", "Please enter the directory to write source to");
+                config.WriteSourceTo = GetArgument("writeSourceTo", "Please enter the directory to write source to");
             }
 
             return config;
