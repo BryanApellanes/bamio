@@ -1,4 +1,8 @@
-﻿# Bamdb
+﻿# This document should be considered a draft
+
+TODO: https://natemcmaster.com/blog/2017/11/11/build-tools-in-nuget/
+
+# Bamdb
 
 Bam Database (bamdb) is a high level data access component which provides a client gateway to multiple data persistence layers including various RDBM systems such as Microsoft Sql, MySql, Postgres and SQLite as well as no sql solutions such as mongo and its own internal data repository system.  It is also used to generate data access objects, data transfer objects and repositories from plain CLR classes.
 
@@ -60,6 +64,5 @@ A bamdb schema file is a json formatted file containing meta data that describes
 
 The following describes the options available to serve data using bamdb.
 
-TODO: finish this
 
  
