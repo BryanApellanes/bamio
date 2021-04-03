@@ -18,7 +18,7 @@ namespace Bam.Shell.CodeGen
             Assembly assembly = Assembly.LoadFrom(config.TypeAssembly);
             if (assembly == null)
             {
-                OutLineFormat("The specified type assembly wasn't found: {0}", ConsoleColor.Magenta, config.TypeAssembly);
+                Message.PrintLine("The specified type assembly wasn't found: {0}", ConsoleColor.Magenta, config.TypeAssembly);
                 Exit(1);
             }
 
@@ -26,7 +26,7 @@ namespace Bam.Shell.CodeGen
             Assembly generated = generator.GenerateAssembly(out byte[] bytes);
             FileInfo file = new FileInfo($"{generator.AssemblyName}.dll");
             File.WriteAllBytes(file.FullName, bytes);
-            OutLineFormat("Wrote file {0}", ConsoleColor.Blue, file.FullName);
+            Message.PrintLine("Wrote file {0}", ConsoleColor.Blue, file.FullName);
         }
     }
 }
