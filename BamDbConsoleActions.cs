@@ -50,7 +50,7 @@ namespace Bam.Net.Application
             ConsoleLogger logger = new ConsoleLogger();
             logger.StartLoggingThread();
 
-            DaoRepoGenerationConfig config = GetGenerationConfig(o=> OutLine(o, ConsoleColor.Cyan));
+            DaoRepoGenerationConfig config = GetGenerationConfig(o => OutLine(o, ConsoleColor.Cyan));
 
             SchemaRepositoryGenerator schemaRepositoryGenerator = GenerateRepositorySource(config, logger);
 
@@ -76,7 +76,7 @@ namespace Bam.Net.Application
             FileInfo fileInfo = daoAssembly.GetFileInfo();
             string copyTo = Path.Combine(GetArgument("writeTo", "Please enter the directory to copy the resulting assembly to"), fileInfo.Name);
             fileInfo.CopyTo(copyTo, true);
-            OutLineFormat("File generated:\r\n{0}", copyTo);
+            Message.PrintLine("File generated:\r\n{0}", copyTo);
             Pause("Press enter to continue...");
         }
 
@@ -223,10 +223,15 @@ namespace Bam.Net.Application
             DaoRepoGenerationConfig config = new DaoRepoGenerationConfig();
             if (Arguments.Contains("config"))
             {
-                config = DeserializeConfigArg<DaoRepoGenerationConfig>(output);
+                config = DeserializeConfigArg<DaoRepoGenerationConfig>(output, out FileInfo configFile);
                 if (config == null)
                 {
                     Exit(1);
+                }
+
+                if(!string.IsNullOrEmpty(config.WriteSourceTo) && config.WriteSourceTo.StartsWith("."))
+                {
+                    config.WriteSourceTo = Path.Combine(configFile.Directory.FullName, config.WriteSourceTo);
                 }
             }
             else
@@ -240,11 +245,16 @@ namespace Bam.Net.Application
 
             return config;
         }
-        
+
         private static T DeserializeConfigArg<T>(Action<string> output)
         {
+            return DeserializeConfigArg<T>(output, out FileInfo ignore);
+        }
+
+        private static T DeserializeConfigArg<T>(Action<string> output, out FileInfo configFile)
+        {
             T config;
-            FileInfo configFile = new FileInfo(Arguments["config"]);
+            configFile = new FileInfo(Arguments["config"]);
             if (!configFile.Exists)
             {
                 output($"Config file not found: {configFile.FullName}");
@@ -252,7 +262,7 @@ namespace Bam.Net.Application
             }
 
             output($"using config: {configFile.FullName}");
-            config = configFile.FromFile<T>();
+            config = configFile.FromFile<T>();            
             string json = config.ToJson(true);
             output(json);
             return config;
