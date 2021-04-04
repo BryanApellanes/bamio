@@ -1,6 +1,5 @@
 using System;
 using Bam.Shell;
-using Bam.Shell;
 
 namespace Bam.Shell.Data
 {

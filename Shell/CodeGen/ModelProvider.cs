@@ -93,7 +93,7 @@ namespace Bam.Shell.CodeGen
                     return type.Namespace;
                 }
             }
-            OutLineFormat("No AppModels namespaces found", ConsoleColor.Yellow);
+            Message.PrintLine("No AppModels namespaces found", ConsoleColor.Yellow);
             return string.Empty;
         }
         
@@ -107,7 +107,7 @@ namespace Bam.Shell.CodeGen
 
             foreach (Type type in assembly.GetTypes())
             {
-                OutLineFormat("{0}.{1}", ConsoleColor.Cyan, type.Namespace, type.Name);
+                Message.PrintLine("{0}.{1}", ConsoleColor.Cyan, type.Namespace, type.Name);
             }
         }
         
@@ -158,7 +158,7 @@ namespace Bam.Shell.CodeGen
                 model = file.FromYamlFile<AppDataModel>();
                 if(model == null)
                 {
-                    OutLineFormat("{0} was empty or otherwise invalid", ConsoleColor.Yellow, file.FullName);
+                    Message.PrintLine("{0} was empty or otherwise invalid", ConsoleColor.Yellow, file.FullName);
                     return new AppDataModel { BaseNamespace = appName, Name = dataModelName };
                 }
             }
@@ -173,13 +173,13 @@ namespace Bam.Shell.CodeGen
 
             if (output.ExitCode != 0)
             {
-                OutLineFormat("Dao generation from *.db.js files exited with code {0}: {1}", ConsoleColor.Yellow, output.ExitCode, output.StandardError.Substring(output.StandardError.Length - 300));
+                Message.PrintLine("Dao generation from *.db.js files exited with code {0}: {1}", ConsoleColor.Yellow, output.ExitCode, output.StandardError.Substring(output.StandardError.Length - 300));
             }
         }
         
         private void GenerateSchemaRepository()
         {
-            OutLineFormat("Generating Dao repository for AppModels", ConsoleColor.Cyan);
+            Message.PrintLine("Generating Dao repository for AppModels", ConsoleColor.Cyan);
             FileInfo csprojFile = ShellProvider.FindProjectFile();
             BamSettings settings = GetSettings();
 
@@ -221,14 +221,14 @@ namespace Bam.Shell.CodeGen
 
             if (output.ExitCode != 0)
             {
-                OutLineFormat("Schema generation exited with code {0}: {1}\r\n{2}", ConsoleColor.Yellow, output.ExitCode, output.StandardError, output.StandardOutput);
+                Message.PrintLine("Schema generation exited with code {0}: {1}\r\n{2}", ConsoleColor.Yellow, output.ExitCode, output.StandardError, output.StandardOutput);
                 Thread.Sleep(300);
             }
         }
                         
         private void GenerateDynamicTypeSource()
         {
-            OutLineFormat("Generating dynamic types from json ({0}) and yaml ({1}).", Path.Combine(AppData.FullName, "json"), Path.Combine(AppData.FullName, "yaml"));
+            Message.PrintLine("Generating dynamic types from json ({0}) and yaml ({1}).", Path.Combine(AppData.FullName, "json"), Path.Combine(AppData.FullName, "yaml"));
             DynamicTypeManager dynamicTypeManager = new DynamicTypeManager();
             FileInfo csprojFile = ShellProvider.FindProjectFile();
             if (csprojFile == null)
@@ -238,7 +238,7 @@ namespace Bam.Shell.CodeGen
             string source = dynamicTypeManager.GenerateSource(AppData, Path.GetFileNameWithoutExtension(csprojFile.Name));
             Expect.IsNotNullOrEmpty(source, "Source was not generated");
 
-            OutLineFormat("Generated source: {0}", ConsoleColor.DarkCyan, source.Sha256());
+            Message.PrintLine("Generated source: {0}", ConsoleColor.DarkCyan, source.Sha256());
         }
     }
 }

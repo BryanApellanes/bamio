@@ -14,7 +14,7 @@ namespace Bam.Shell.CodeGen
         public override void Generate(Action<string> output = null, Action<string> error = null)
         {
             // TODO: encapsulate GraphQLGenerationConfig provider logic; IGraphQLGenerationConfigProvider
-            GraphQLGenerationConfig config = BamDbConsoleActions.GetGraphQLGenerationConfig(o=> OutLineFormat(o, ConsoleColor.Blue));
+            GraphQLGenerationConfig config = BamDbConsoleActions.GetGraphQLGenerationConfig(o=> Message.PrintLine(o, ConsoleColor.Blue));
             Assembly assembly = Assembly.LoadFrom(config.TypeAssembly);
             if (assembly == null)
             {

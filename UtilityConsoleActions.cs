@@ -110,7 +110,7 @@ namespace Bam.Net.Application
             string outputDirectory = string.IsNullOrEmpty(Arguments["initDaoConfig"]) ? "." : Arguments["initDaoConfig"];
             string outputPath = new DirectoryInfo(Path.Combine(outputDirectory, "DaoConfigs.yaml")).FullName;
             new DaoConfig[]{first, second}.ToYamlFile(outputPath);
-            OutLineFormat("Wrote config file {0}", outputPath);
+            Message.PrintLine("Wrote config file {0}", outputPath);
             Thread.Sleep(300);
         }
 
@@ -131,7 +131,7 @@ namespace Bam.Net.Application
 
             string outputPath = new DirectoryInfo(Path.Combine(".", "DaoConfigs.yaml")).FullName;
             DaoConfig.FromDatabaseConfig(databaseConfig).ToYamlFile(outputPath);
-            OutLineFormat("Wrote file {0}", ConsoleColor.Cyan, outputPath);
+            Message.PrintLine("Wrote file {0}", ConsoleColor.Cyan, outputPath);
             Thread.Sleep(300);
         }
         

@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using Bam.Net;
 using Bam.Net.Application;
+using Bam.Net.CommandLine;
 
 namespace Bam.Shell.Data
 {
@@ -86,7 +87,7 @@ namespace Bam.Shell.Data
                     string[] keyParts = parts[0].DelimitSplit("=", true);
                     if (keyParts.Length != 2)
                     {
-                        OutLineFormat("Unrecognized key specification {0}: expected format key=[true|false].", ConsoleColor.Yellow, parts[0]);
+                        Message.PrintLine("Unrecognized key specification {0}: expected format key=[true|false].", ConsoleColor.Yellow, parts[0]);
                     }
                     else
                     {
