@@ -17,10 +17,10 @@
     <NuspecProperties>publishDir=$([MSBuild]::NormalizeDirectory($(IntermediatePackDir)))</NuspecProperties>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <OutputPath>\opt\bam\build\bamdb\debug\</OutputPath>
+    <OutputPath>\opt\bam\build\debug\bamdb\</OutputPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
-    <OutputPath>\opt\bam\build\bamdb\release</OutputPath>
+    <OutputPath>\opt\bam\build\release\bamdb\</OutputPath>
   </PropertyGroup>
   <ItemGroup>
     <Content Include="troo.ico" />
