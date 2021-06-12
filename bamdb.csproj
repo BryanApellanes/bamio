@@ -6,7 +6,7 @@
     <StartupObject>Bam.Net.Application.Program</StartupObject>
     <RootNamespace>Bam.Net.Application</RootNamespace>
     <PackageId>bamdb</PackageId>
-    <Version>1.0.6-5eec7cb</Version>
+    <Version>1.0.6</Version>
     <Authors>Bryan Apellanes</Authors>
     <Company>ThreeHeadz</Company>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
