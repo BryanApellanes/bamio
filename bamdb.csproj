@@ -29,6 +29,7 @@
     <PackageReference Include="GraphQL" Version="3.1.5" />
     <PackageReference Include="Newtonsoft.Json.Schema" Version="3.0.13" />
     <PackageReference Include="System.Data.SQLite.Core" Version="1.0.109.2" />
+    <PackageReference Include="bam.net.core" Version="1.0.6" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\_lib\bam.net.data.graphql\bam.net.data.graphql.csproj" />
