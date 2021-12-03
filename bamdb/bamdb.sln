@@ -15,6 +15,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "bam.net.data.graphql", "..\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "bam.net.data.dynamic", "..\submodule\Bam.Net.Data.Dynamic\bam.net.data.dynamic.csproj", "{17FDCAF9-7999-48A4-A065-B6BA5B606865}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "submodules", "submodules", "{60FFD1FF-FB61-42CF-9052-14B724736628}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		..\submodule\Bam.Core\submodules\bam.net.shared\bam.net.shared.projitems*{8f2cb78e-8c2e-45c6-97a0-c38f60a85e98}*SharedItemsImports = 13
@@ -48,6 +50,13 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C6228179-A61B-4EE6-A9F2-3612B12C15F4} = {60FFD1FF-FB61-42CF-9052-14B724736628}
+		{8F2CB78E-8C2E-45C6-97A0-C38F60A85E98} = {60FFD1FF-FB61-42CF-9052-14B724736628}
+		{AEB11C2B-538F-4B9B-9AD2-762116C6588D} = {60FFD1FF-FB61-42CF-9052-14B724736628}
+		{5F99A0E7-A37D-472C-9013-D21A4A7C9AB6} = {60FFD1FF-FB61-42CF-9052-14B724736628}
+		{17FDCAF9-7999-48A4-A065-B6BA5B606865} = {60FFD1FF-FB61-42CF-9052-14B724736628}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C26B0581-CA49-4A12-B46C-F8A602E89BBB}
