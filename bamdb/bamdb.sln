@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31911.196
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "bamdb", "bamdb.csproj", "{A6B8878A-4CA9-4AAC-93AC-6AF7999B204E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "bam.core", "..\submodule\Bam.Core\bam.core\bam.core.csproj", "{C6228179-A61B-4EE6-A9F2-3612B12C15F4}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "bam.net.shared", "..\submodule\Bam.Core\submodules\bam.net.shared\bam.net.shared.shproj", "{8F2CB78E-8C2E-45C6-97A0-C38F60A85E98}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "bam", "..\submodule\bam\bam.csproj", "{AEB11C2B-538F-4B9B-9AD2-762116C6588D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "bam.net.data.graphql", "..\submodule\Bam.Net.Data.GraphQL\bam.net.data.graphql.csproj", "{5F99A0E7-A37D-472C-9013-D21A4A7C9AB6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "bam.net.data.dynamic", "..\submodule\Bam.Net.Data.Dynamic\bam.net.data.dynamic.csproj", "{17FDCAF9-7999-48A4-A065-B6BA5B606865}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		..\submodule\Bam.Core\submodules\bam.net.shared\bam.net.shared.projitems*{8f2cb78e-8c2e-45c6-97a0-c38f60a85e98}*SharedItemsImports = 13
+		..\submodule\Bam.Core\submodules\bam.net.shared\bam.net.shared.projitems*{c6228179-a61b-4ee6-a9f2-3612b12c15f4}*SharedItemsImports = 5
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A6B8878A-4CA9-4AAC-93AC-6AF7999B204E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6B8878A-4CA9-4AAC-93AC-6AF7999B204E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6B8878A-4CA9-4AAC-93AC-6AF7999B204E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6B8878A-4CA9-4AAC-93AC-6AF7999B204E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6228179-A61B-4EE6-A9F2-3612B12C15F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6228179-A61B-4EE6-A9F2-3612B12C15F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6228179-A61B-4EE6-A9F2-3612B12C15F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6228179-A61B-4EE6-A9F2-3612B12C15F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AEB11C2B-538F-4B9B-9AD2-762116C6588D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEB11C2B-538F-4B9B-9AD2-762116C6588D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEB11C2B-538F-4B9B-9AD2-762116C6588D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEB11C2B-538F-4B9B-9AD2-762116C6588D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F99A0E7-A37D-472C-9013-D21A4A7C9AB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F99A0E7-A37D-472C-9013-D21A4A7C9AB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F99A0E7-A37D-472C-9013-D21A4A7C9AB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F99A0E7-A37D-472C-9013-D21A4A7C9AB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17FDCAF9-7999-48A4-A065-B6BA5B606865}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17FDCAF9-7999-48A4-A065-B6BA5B606865}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17FDCAF9-7999-48A4-A065-B6BA5B606865}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17FDCAF9-7999-48A4-A065-B6BA5B606865}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C26B0581-CA49-4A12-B46C-F8A602E89BBB}
+	EndGlobalSection
+EndGlobal
