@@ -18,7 +18,7 @@ using KeyValuePair = Bam.Net.KeyValuePair;
 
 namespace Bam.Shell.CodeGen
 {
-    public class SchemaExtractionProvider : CodeGenProvider
+    public class SchemaExtractionProvider : CommandLineTool
     {
         public SchemaExtractionProvider()
         {
@@ -27,9 +27,9 @@ namespace Bam.Shell.CodeGen
         public const string DefaultDaoConfigFile = "./.bamdb.daoconfigs";
         public const string DefaultOutput = "./_gen";
         
-        public override void RegisterArguments(string[] args)
+        public void RegisterArguments(string[] args)
         {
-            base.RegisterArguments(args);
+            //base.RegisterArguments(args);
             AddValidArgument("output", false, true, "Schema: The directory path to output generated files to.");
             AddValidArgument("config", false, false, "Schema: The file containing serialized DaoConfigs.");
             AddValidArgument("configName", false, false, "Schema | Dao: The name of the entry in the config file to use.");
@@ -38,7 +38,7 @@ namespace Bam.Shell.CodeGen
             AddValidArgument("namespace", false, true, "Dao: The namespace to place generated dao classes into.");
         }
 
-        public override void Generate(Action<string> output = null, Action<string> error = null)
+        public void Generate(Action<string> output = null, Action<string> error = null)
         {
             string writeTo = DefaultOutput;
             if (Arguments.Contains("output"))
@@ -76,7 +76,7 @@ namespace Bam.Shell.CodeGen
             DaoConfig config = GetConfig(output, error, configFile);
 
             ExtractionTargetDbTypes dbType = config.DbType;
-            if (dbType == null || dbType == ExtractionTargetDbTypes.Invalid)
+            if (dbType == ExtractionTargetDbTypes.Invalid)
             {
                 error($"Invalid dbType: {config.DbType}");
                 Exit(1);

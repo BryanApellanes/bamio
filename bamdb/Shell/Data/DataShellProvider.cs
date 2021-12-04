@@ -5,7 +5,7 @@ using Bam.Shell;
 
 namespace Bam.Shell.Data
 {
-    public abstract class DataShellProvider : CommandLineTool, IRegisterArguments
+    public abstract class DataShellProvider : CommandLineTool//, IRegisterArguments
     {
         public abstract void New(Action<string> output = null, Action<string> error = null);
         public abstract void Get(Action<string> output = null, Action<string> error = null);

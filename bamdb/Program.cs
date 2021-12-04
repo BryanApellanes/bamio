@@ -9,7 +9,7 @@ using Bam.Shell.Data;
 namespace Bam.Net.Application
 {
     [Serializable]
-    class Program : ArgZero
+    class Program : CommandLineTool
     {
         static void Main(string[] args)
         {
@@ -23,12 +23,8 @@ namespace Bam.Net.Application
             AddConfigurationSwitches();
             
             BamEnvironmentVariables.SetBamVariable("ApplicationName", "bamdb");
-            RegisterArgZeroProviders<DataShellProvider>(args);
-            RegisterArgZeroProviders<CodeGenProvider>(args);
-            RegisterArgZeroProviders<DaoProvider>(args);
             
             ArgumentAdder.AddArguments(args);
-            ExecuteArgZero(args);
             
             Initialize(args, (a) =>
             {

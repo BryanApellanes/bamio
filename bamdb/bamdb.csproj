@@ -2,25 +2,23 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net5.0</TargetFramework>
-    <!--<RuntimeFrameworkVersion>3.1.0</RuntimeFrameworkVersion>-->
     <StartupObject>Bam.Net.Application.Program</StartupObject>
     <RootNamespace>Bam.Net.Application</RootNamespace>
     <PackageId>bamdb</PackageId>
-    <Version>1.0.6</Version>
+    <Version>2.0.0</Version>
     <Authors>Bryan Apellanes</Authors>
     <Company>ThreeHeadz</Company>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <NoPackageAnalysis>true</NoPackageAnalysis>
     <NuspecFile>bamdb.nuspec</NuspecFile>
-    <IntermediatePackDir>/opt/bam/build/$(Configuration)/$(MSBuildThisFileName)/</IntermediatePackDir>
+    <IntermediatePackDir Condition=" '$(OS)' == 'Windows_NT' ">$(HOMEDRIVE)$(HOMEPATH)/.bam/build/pack/$(Configuration)/$(MSBuildThisFileName)/</IntermediatePackDir>
+    <IntermediatePackDir Condition=" '$(OS)' == 'UNIX' ">$(HOME)/.bam/build/pack/$(Configuration)/$(MSBuildThisFileName)/</IntermediatePackDir>
     <PublishDir>$(IntermediatePackDir)$(TargetFramework)/</PublishDir>
     <NuspecProperties>publishDir=$([MSBuild]::NormalizeDirectory($(IntermediatePackDir)))</NuspecProperties>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <OutputPath>\opt\bam\build\debug\$(MSBuildThisFileName)\</OutputPath>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
-    <OutputPath>\opt\bam\build\release\$(MSBuildThisFileName)\</OutputPath>
+  <PropertyGroup>
+    <OutputPath Condition=" '$(OS)' == 'Windows_NT' ">$(HOMEDRIVE)$(HOMEPATH)\.bam\build\$(Configuration)\$(MSBuildThisFileName)\</OutputPath>
+    <OutputPath Condition=" '$(OS)' == 'UNIX' ">$(HOME)\.bam\build\$(Configuration)\$(MSBuildThisFileName)\</OutputPath>
   </PropertyGroup>
   <ItemGroup>
     <Content Include="troo.ico" />
@@ -34,6 +32,7 @@
     <ProjectReference Include="..\submodule\Bam.Core\bam.core\bam.core.csproj" />
     <ProjectReference Include="..\submodule\Bam.Net.Data.Dynamic\bam.net.data.dynamic.csproj" />
     <ProjectReference Include="..\submodule\Bam.Net.Data.GraphQL\bam.net.data.graphql.csproj" />
+    <ProjectReference Include="..\submodule\bam\bam.csproj" />
   </ItemGroup>
   <ItemGroup>
     <None Update="DaoRepoGenerationConfig.yaml">
