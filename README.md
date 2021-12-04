@@ -9,18 +9,17 @@ Bam Database (bamdb) is a high level data access component which provides a clie
 ## Command Line Switch Code Generation
 The following describes command line switch based code generation options using bamdb.
 
-#### /generateDaoAssemblyForTypes
+### /generateDaoAssemblyForTypes
 Generate a Dao Assembly for types in a specified namespace of a specified assembly.
 
-#### /generateDaoCodeForTypes
+### /generateDaoCodeForTypes
 Generate Dao source code for types in a specified namespace of a specified assembly.
 
-#### /generateDtosForDaos
+### /generateDtosForDaos
 Generate Dto source for types in a specified namespace of a specified assembly, optionally compiling and keeping the source.
 
-#### /generateSchemaRepository
-In addition to generating Daos and Dtos for types in a specified namespace of a specified assembly, `/generateSchemaRepository` switch will 
-also generate a schema specific DaoRepository for all the types found.
+### /generateSchemaRepository
+In addition to generating Daos and Dtos for types in a specified namespace of a specified assembly, `/generateSchemaRepository` switch generates a schema specific DaoRepository which can store all the types found.
 
 Accepts a `config` command line argument specifying the path to a yaml serialized GenerationConfig:
 
