@@ -50,7 +50,7 @@ namespace Bam.Net.Application
             ConsoleLogger logger = new ConsoleLogger();
             logger.StartLoggingThread();
 
-            DaoRepoGenerationConfig config = GetGenerationConfig(o => OutLine(o, ConsoleColor.Cyan));
+            DaoRepoGenerationConfig config = GetGenerationConfig(o => Message.PrintLine(o, ConsoleColor.Cyan));
 
             SchemaRepositoryGenerator schemaRepositoryGenerator = GenerateRepositorySource(config, logger);
 

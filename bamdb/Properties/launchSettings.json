@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "bamdb": {
+      "commandName": "Project",
+      "commandLineArgs": "/gsr /config:B:\\src\\repos\\bamapi\\submodule\\Bam.Core\\submodules\\bam.net.shared\\Encryption\\Data\\DaoRepoGenerationConfig.yaml"
+    }
+  }
+}

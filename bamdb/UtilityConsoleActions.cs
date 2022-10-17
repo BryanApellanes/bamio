@@ -52,7 +52,7 @@ namespace Bam.Net.Application
                 StringBuilder stringBuilder = new StringBuilder();
                 stringBuilder.AppendFormat("ClassName: {0}\r\n", duplicateClassNames[className].First().ClassName);
                 duplicateClassNames[className].Each(table => stringBuilder.AppendFormat("\tTableName: {0}\r\n", table.Name));
-                OutLine(stringBuilder.ToString());
+                Message.PrintLine(stringBuilder.ToString());
             }
             Thread.Sleep(300);
         }

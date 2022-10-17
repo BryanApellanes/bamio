@@ -19,8 +19,7 @@ namespace Bam.Net.Application
     [Serializable]
     public class ConsoleActions : CommandLineTool
     {
-        static string contentRootConfigKey = "ContentRoot";
-        static string defaultContentRoot = BamHome.Content;
+        static string defaultContentRoot = BamHome.ContentPath;
         static BamDbServer bamDbServer;
 
         [ConsoleAction("S", "Start the BamDb server")]
@@ -40,7 +39,7 @@ namespace Bam.Net.Application
             }
             else
             {
-                OutLine("BamDb server not running");
+                Message.PrintLine("BamDb server not running");
             }
         }
         public const string AppDataFolderName = "AppData";
@@ -71,14 +70,14 @@ namespace Bam.Net.Application
         public void PrintConfig()
         {
             Config config = Config.Current;
-            OutLine(config.File.FullName);
+            Message.PrintLine(config.File.FullName);
             StringBuilder msg = new StringBuilder();
             foreach(string key in config.AppSettings.Keys)
             {
                 msg.AppendLine($"{key} = {config[key]}");
             }
 
-            OutLine(msg.ToString());
+            Message.PrintLine(msg.ToString());
         }
 
         public static void StartBamDbServer(ConsoleLogger logger, IRepository repo)
@@ -86,7 +85,7 @@ namespace Bam.Net.Application
             BamConf conf = BamConf.Load(GetArgument("content", "Enter the path to the content root").Or(defaultContentRoot));
             bamDbServer = new BamDbServer(conf, logger, repo)
             {
-                HostPrefixes = new HashSet<HostPrefix>(HostPrefix.FromBamProcessConfig()),
+                HostBindings = new HashSet<HostBinding>(HostBinding.FromBamProcessConfig()),
                 MonitorDirectories = Config.Current["MonitorDirectories"].DelimitSplit(",", ";")
             };
             bamDbServer.Start();
