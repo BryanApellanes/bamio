@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31911.196
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "bamdb", "bamdb.csproj", "{A6B8878A-4CA9-4AAC-93AC-6AF7999B204E}"
 EndProject
@@ -16,6 +16,18 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "bam.net.data.dynamic", "..\submodule\Bam.Net.Data.Dynamic\bam.net.data.dynamic.csproj", "{17FDCAF9-7999-48A4-A065-B6BA5B606865}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "submodules", "submodules", "{60FFD1FF-FB61-42CF-9052-14B724736628}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{DC578DA0-1DCE-42C2-985D-ED0CEF11CA0C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "bam.net.data.core.tests", "..\submodule\Bam.Core\tests\bam.net.data.core.tests\bam.net.data.core.tests.csproj", "{46654E83-C704-47C5-883B-10AA4354394C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "bam.net.data.integration.core.tests", "..\submodule\Bam.Core\tests\bam.net.data.integration.core.tests\bam.net.data.integration.core.tests.csproj", "{EDD40025-A52A-488A-8D05-8E97E8A37591}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "daoref", "..\submodule\Bam.Core\tests\daoref\daoref.csproj", "{42EA6435-F272-4088-B9FC-C1196B25B7A5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "bam.net.data.repositories.core.tests", "..\submodule\Bam.Core\tests\bam.net.data.repositories.core.tests\bam.net.data.repositories.core.tests.csproj", "{DB40D22A-D179-4B73-AFCD-A00809AA2B59}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "bam.net.schema.json.tests", "..\submodule\Bam.Core\tests\bam.net.schema.json.tests\bam.net.schema.json.tests.csproj", "{36FD33BF-96D8-4C27-B2ED-149BF07A907C}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
@@ -47,6 +59,26 @@ Global
 		{17FDCAF9-7999-48A4-A065-B6BA5B606865}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{17FDCAF9-7999-48A4-A065-B6BA5B606865}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{17FDCAF9-7999-48A4-A065-B6BA5B606865}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46654E83-C704-47C5-883B-10AA4354394C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46654E83-C704-47C5-883B-10AA4354394C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46654E83-C704-47C5-883B-10AA4354394C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46654E83-C704-47C5-883B-10AA4354394C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDD40025-A52A-488A-8D05-8E97E8A37591}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDD40025-A52A-488A-8D05-8E97E8A37591}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDD40025-A52A-488A-8D05-8E97E8A37591}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDD40025-A52A-488A-8D05-8E97E8A37591}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42EA6435-F272-4088-B9FC-C1196B25B7A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42EA6435-F272-4088-B9FC-C1196B25B7A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42EA6435-F272-4088-B9FC-C1196B25B7A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42EA6435-F272-4088-B9FC-C1196B25B7A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB40D22A-D179-4B73-AFCD-A00809AA2B59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB40D22A-D179-4B73-AFCD-A00809AA2B59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB40D22A-D179-4B73-AFCD-A00809AA2B59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB40D22A-D179-4B73-AFCD-A00809AA2B59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36FD33BF-96D8-4C27-B2ED-149BF07A907C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36FD33BF-96D8-4C27-B2ED-149BF07A907C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36FD33BF-96D8-4C27-B2ED-149BF07A907C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36FD33BF-96D8-4C27-B2ED-149BF07A907C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -57,6 +89,11 @@ Global
 		{AEB11C2B-538F-4B9B-9AD2-762116C6588D} = {60FFD1FF-FB61-42CF-9052-14B724736628}
 		{5F99A0E7-A37D-472C-9013-D21A4A7C9AB6} = {60FFD1FF-FB61-42CF-9052-14B724736628}
 		{17FDCAF9-7999-48A4-A065-B6BA5B606865} = {60FFD1FF-FB61-42CF-9052-14B724736628}
+		{DC578DA0-1DCE-42C2-985D-ED0CEF11CA0C} = {60FFD1FF-FB61-42CF-9052-14B724736628}
+		{46654E83-C704-47C5-883B-10AA4354394C} = {DC578DA0-1DCE-42C2-985D-ED0CEF11CA0C}
+		{EDD40025-A52A-488A-8D05-8E97E8A37591} = {DC578DA0-1DCE-42C2-985D-ED0CEF11CA0C}
+		{DB40D22A-D179-4B73-AFCD-A00809AA2B59} = {DC578DA0-1DCE-42C2-985D-ED0CEF11CA0C}
+		{36FD33BF-96D8-4C27-B2ED-149BF07A907C} = {DC578DA0-1DCE-42C2-985D-ED0CEF11CA0C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C26B0581-CA49-4A12-B46C-F8A602E89BBB}

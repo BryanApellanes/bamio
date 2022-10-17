@@ -8,7 +8,6 @@ namespace Bam.Net.Application
         internal static void AddArguments(string[] args)
         {
             AddUtilityArguments();
-            ParseArgs(args.Skip(2).ToArray());
         }
 
         private static void AddUtilityArguments()

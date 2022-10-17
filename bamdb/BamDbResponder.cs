@@ -10,6 +10,9 @@ namespace Bam.Net.Application
 {
     public class BamDbResponder : HttpHeaderResponder, IInitialize<BamDbResponder>
     {
+        public BamDbResponder() : base(BamConf.Default, Log.Default)
+        { }
+
         public BamDbResponder(BamConf conf, ILogger logger, IRepository repository, bool verbose = false)
             : base(conf, logger)
         {
