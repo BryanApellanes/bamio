@@ -1,4 +1,4 @@
-﻿# This document should be considered a draft
+﻿# This document is a draft
 
 TODO: https://natemcmaster.com/blog/2017/11/11/build-tools-in-nuget/
 
