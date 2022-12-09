@@ -1,9 +1,6 @@
 [submodule "submodule/Bam.Core"]
 	path = submodule/Bam.Core
 	url = git@github.com:BryanApellanes/Bam.Core.git
-[submodule "submodule/bam"]
-	path = submodule/bam
-	url = git@github.com:BryanApellanes/bam.git
 [submodule "submodule/Bam.Net.Data.GraphQL"]
 	path = submodule/Bam.Net.Data.GraphQL
 	url = git@github.com:BryanApellanes/Bam.Net.Data.GraphQL.git
