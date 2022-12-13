@@ -32,7 +32,7 @@
     <ProjectReference Include="..\submodule\Bam.Core\bam.core\bam.core.csproj" />
     <ProjectReference Include="..\submodule\Bam.Net.Data.Dynamic\bam.net.data.dynamic.csproj" />
     <ProjectReference Include="..\submodule\Bam.Net.Data.GraphQL\bam.net.data.graphql.csproj" />
-    <ProjectReference Include="..\submodule\bam\bam.csproj" />
+    <ProjectReference Include="..\submodule\bamcli\bam\bam.csproj" />
   </ItemGroup>
   <ItemGroup>
     <None Update="DaoRepoGenerationConfig.yaml">
