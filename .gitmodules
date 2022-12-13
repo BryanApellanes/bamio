@@ -7,3 +7,6 @@
 [submodule "submodule/Bam.Net.Data.Dynamic"]
 	path = submodule/Bam.Net.Data.Dynamic
 	url = git@github.com:BryanApellanes/Bam.Net.Data.Dynamic.git
+[submodule "submodule/bamcli"]
+	path = submodule/bamcli
+	url = https://github.com/BryanApellanes/bamcli
