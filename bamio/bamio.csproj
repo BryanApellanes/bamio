@@ -21,21 +21,19 @@
     <OutputPath Condition=" '$(OS)' == 'UNIX' ">$(HOME)\.bam\build\$(Configuration)\$(MSBuildThisFileName)\</OutputPath>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="troo.ico" />
-  </ItemGroup>
-  <ItemGroup>
     <PackageReference Include="GraphQL" Version="3.1.5" />
     <PackageReference Include="Newtonsoft.Json.Schema" Version="3.0.13" />
     <PackageReference Include="System.Data.SQLite.Core" Version="1.0.109.2" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\bamserver\bam.protocol\bam.protocol.csproj" />
     <ProjectReference Include="..\submodule\Bam.Core\bam.core\bam.core.csproj" />
     <ProjectReference Include="..\submodule\Bam.Net.Data.Dynamic\bam.net.data.dynamic.csproj" />
     <ProjectReference Include="..\submodule\Bam.Net.Data.GraphQL\bam.net.data.graphql.csproj" />
     <ProjectReference Include="..\submodule\bamcli\bam\bam.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <None Update="DaoRepoGenerationConfig.yaml">
+    <None Update="Legacy\DaoRepoGenerationConfig.yaml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
