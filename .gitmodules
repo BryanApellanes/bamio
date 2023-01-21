@@ -10,3 +10,6 @@
 [submodule "submodules/bam.net.data.graphql"]
 	path = submodules/bam.net.data.graphql
 	url = git@github.com:BryanApellanes/Bam.Net.Data.GraphQL.git
+[submodule "submodules/bamserver"]
+	path = submodules/bamserver
+	url = git@github.com:BryanApellanes/bamserver.git
