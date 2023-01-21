@@ -16,3 +16,6 @@
 [submodule "submodules/bamdb"]
 	path = submodules/bamdb
 	url = git@github.com:BryanApellanes/bamdb.git
+[submodule "submodules/bamfs"]
+	path = submodules/bamfs
+	url = git@github.com:BryanApellanes/bamfs.git
