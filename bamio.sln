@@ -5,39 +5,39 @@ VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "bamio", "bamio\bamio.csproj", "{A6B8878A-4CA9-4AAC-93AC-6AF7999B204E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "bam.core", "submodule\Bam.Core\bam.core\bam.core.csproj", "{C6228179-A61B-4EE6-A9F2-3612B12C15F4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "bam.core", "submodules\bam.core\bam.core\bam.core.csproj", "{C6228179-A61B-4EE6-A9F2-3612B12C15F4}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "bam.net.shared", "submodule\Bam.Core\submodules\bam.net.shared\bam.net.shared.shproj", "{22DA9F9E-A84F-47EE-A870-3CC845812606}"
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "bam.net.shared", "submodules\bam.core\submodules\bam.net.shared\bam.net.shared.shproj", "{22DA9F9E-A84F-47EE-A870-3CC845812606}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "bam.net.data.graphql", "submodule\Bam.Net.Data.GraphQL\bam.net.data.graphql.csproj", "{5F99A0E7-A37D-472C-9013-D21A4A7C9AB6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "bam.net.data.graphql", "submodules\bam.net.data.graphql\bam.net.data.graphql.csproj", "{5F99A0E7-A37D-472C-9013-D21A4A7C9AB6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "bam.net.data.dynamic", "submodule\Bam.Net.Data.Dynamic\bam.net.data.dynamic.csproj", "{17FDCAF9-7999-48A4-A065-B6BA5B606865}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "bam.net.data.dynamic", "submodules\bam.net.data.dynamic\bam.net.data.dynamic.csproj", "{17FDCAF9-7999-48A4-A065-B6BA5B606865}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "submodules", "submodules", "{60FFD1FF-FB61-42CF-9052-14B724736628}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{DC578DA0-1DCE-42C2-985D-ED0CEF11CA0C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "bam.net.data.core.tests", "submodule\Bam.Core\tests\bam.net.data.core.tests\bam.net.data.core.tests.csproj", "{46654E83-C704-47C5-883B-10AA4354394C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "bam.net.data.core.tests", "submodules\bam.core\tests\bam.net.data.core.tests\bam.net.data.core.tests.csproj", "{46654E83-C704-47C5-883B-10AA4354394C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "bam.net.data.integration.core.tests", "submodule\Bam.Core\tests\bam.net.data.integration.core.tests\bam.net.data.integration.core.tests.csproj", "{EDD40025-A52A-488A-8D05-8E97E8A37591}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "bam.net.data.integration.core.tests", "submodules\bam.core\tests\bam.net.data.integration.core.tests\bam.net.data.integration.core.tests.csproj", "{EDD40025-A52A-488A-8D05-8E97E8A37591}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "daoref", "submodule\Bam.Core\tests\daoref\daoref.csproj", "{42EA6435-F272-4088-B9FC-C1196B25B7A5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "daoref", "submodules\bam.core\tests\daoref\daoref.csproj", "{42EA6435-F272-4088-B9FC-C1196B25B7A5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "bam.net.data.repositories.core.tests", "submodule\Bam.Core\tests\bam.net.data.repositories.core.tests\bam.net.data.repositories.core.tests.csproj", "{DB40D22A-D179-4B73-AFCD-A00809AA2B59}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "bam.net.data.repositories.core.tests", "submodules\bam.core\tests\bam.net.data.repositories.core.tests\bam.net.data.repositories.core.tests.csproj", "{DB40D22A-D179-4B73-AFCD-A00809AA2B59}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "bam.net.schema.json.tests", "submodule\Bam.Core\tests\bam.net.schema.json.tests\bam.net.schema.json.tests.csproj", "{36FD33BF-96D8-4C27-B2ED-149BF07A907C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "bam.net.schema.json.tests", "submodules\bam.core\tests\bam.net.schema.json.tests\bam.net.schema.json.tests.csproj", "{36FD33BF-96D8-4C27-B2ED-149BF07A907C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "bam", "submodule\bamcli\bam\bam.csproj", "{2F4946C4-064B-4989-AB15-8CF209E4BED2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "bam", "submodules\bamcli\bam\bam.csproj", "{2F4946C4-064B-4989-AB15-8CF209E4BED2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "bamcli", "bamcli", "{9BD94D36-4557-4CFE-A30E-2A76D1AD3373}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "submodules", "submodules", "{83AB8E4B-58DF-42AE-A17F-B5D75ACEC1A2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "bam.core", "submodule\bamcli\submodules\bam.core\bam.core\bam.core.csproj", "{D71C6393-C71B-4844-B771-C7DDD04DA78D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "bam.core", "submodules\bamcli\submodules\bam.core\bam.core\bam.core.csproj", "{D71C6393-C71B-4844-B771-C7DDD04DA78D}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "bam.net.shared", "submodule\bamcli\submodules\bam.core\submodules\bam.net.shared\bam.net.shared.shproj", "{63143873-C34B-4F8D-9A3B-54AADAC8BE4C}"
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "bam.net.shared", "submodules\bamcli\submodules\bam.core\submodules\bam.net.shared\bam.net.shared.shproj", "{63143873-C34B-4F8D-9A3B-54AADAC8BE4C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "bam.net.data.dynamic", "submodule\bamcli\submodules\bam.net.data.dynamic\bam.net.data.dynamic.csproj", "{72547520-8574-4858-8A37-0B0266645B96}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "bam.net.data.dynamic", "submodules\bamcli\submodules\bam.net.data.dynamic\bam.net.data.dynamic.csproj", "{72547520-8574-4858-8A37-0B0266645B96}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -118,9 +118,9 @@ Global
 		SolutionGuid = {C26B0581-CA49-4A12-B46C-F8A602E89BBB}
 	EndGlobalSection
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		submodule\Bam.Core\submodules\bam.net.shared\bam.net.shared.projitems*{22da9f9e-a84f-47ee-a870-3cc845812606}*SharedItemsImports = 13
-		submodule\bamcli\submodules\bam.core\submodules\bam.net.shared\bam.net.shared.projitems*{63143873-c34b-4f8d-9a3b-54aadac8be4c}*SharedItemsImports = 13
-		submodule\Bam.Core\submodules\bam.net.shared\bam.net.shared.projitems*{c6228179-a61b-4ee6-a9f2-3612b12c15f4}*SharedItemsImports = 5
-		submodule\bamcli\submodules\bam.core\submodules\bam.net.shared\bam.net.shared.projitems*{d71c6393-c71b-4844-b771-c7ddd04da78d}*SharedItemsImports = 5
+		submodules\bam.core\submodules\bam.net.shared\bam.net.shared.projitems*{22da9f9e-a84f-47ee-a870-3cc845812606}*SharedItemsImports = 13
+		submodules\bamcli\submodules\bam.core\submodules\bam.net.shared\bam.net.shared.projitems*{63143873-c34b-4f8d-9a3b-54aadac8be4c}*SharedItemsImports = 13
+		submodules\bam.core\submodules\bam.net.shared\bam.net.shared.projitems*{c6228179-a61b-4ee6-a9f2-3612b12c15f4}*SharedItemsImports = 5
+		submodules\bamcli\submodules\bam.core\submodules\bam.net.shared\bam.net.shared.projitems*{d71c6393-c71b-4844-b771-c7ddd04da78d}*SharedItemsImports = 5
 	EndGlobalSection
 EndGlobal
