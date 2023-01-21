@@ -26,11 +26,11 @@
     <PackageReference Include="System.Data.SQLite.Core" Version="1.0.109.2" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\bamserver\bam.protocol\bam.protocol.csproj" />
     <ProjectReference Include="..\submodules\Bam.Core\bam.core\bam.core.csproj" />
     <ProjectReference Include="..\submodules\Bam.Net.Data.Dynamic\bam.net.data.dynamic.csproj" />
     <ProjectReference Include="..\submodules\Bam.Net.Data.GraphQL\bam.net.data.graphql.csproj" />
     <ProjectReference Include="..\submodules\bamcli\bam\bam.csproj" />
+    <ProjectReference Include="..\submodules\bamserver\bam.protocol\bam.protocol.csproj" />
   </ItemGroup>
   <ItemGroup>
     <None Update="Legacy\DaoRepoGenerationConfig.yaml">

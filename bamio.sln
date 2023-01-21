@@ -29,7 +29,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "bam.net.schema.json.tests",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "bam", "submodules\bamcli\bam\bam.csproj", "{2F4946C4-064B-4989-AB15-8CF209E4BED2}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "bamcli", "bamcli", "{9BD94D36-4557-4CFE-A30E-2A76D1AD3373}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "cli", "cli", "{9BD94D36-4557-4CFE-A30E-2A76D1AD3373}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "submodules", "submodules", "{83AB8E4B-58DF-42AE-A17F-B5D75ACEC1A2}"
 EndProject
@@ -38,6 +38,18 @@ EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "bam.net.shared", "submodules\bamcli\submodules\bam.core\submodules\bam.net.shared\bam.net.shared.shproj", "{63143873-C34B-4F8D-9A3B-54AADAC8BE4C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "bam.net.data.dynamic", "submodules\bamcli\submodules\bam.net.data.dynamic\bam.net.data.dynamic.csproj", "{72547520-8574-4858-8A37-0B0266645B96}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "server", "server", "{BC7E303F-2874-4D7F-9769-CA5241F66E2C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "bam.protocol", "submodules\bamserver\bam.protocol\bam.protocol.csproj", "{04BE5182-8ED7-441B-A4D4-7A0959CB13E9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "bam.core", "submodules\bamserver\submodules\bam.core\bam.core\bam.core.csproj", "{AA052BA1-27D4-44B8-BB13-02092D4E84A6}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "bam.net.shared", "submodules\bamserver\submodules\bam.core\submodules\bam.net.shared\bam.net.shared.shproj", "{D4D0E63C-C037-479C-A98D-26EF49B7EFC0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_core", "_core", "{5D95B2EF-B588-42B2-8EDC-497E759B2B65}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "submodules", "submodules", "{9735D7A0-9B4A-414E-8237-0F83510F021F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -93,16 +105,24 @@ Global
 		{72547520-8574-4858-8A37-0B0266645B96}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{72547520-8574-4858-8A37-0B0266645B96}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{72547520-8574-4858-8A37-0B0266645B96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04BE5182-8ED7-441B-A4D4-7A0959CB13E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04BE5182-8ED7-441B-A4D4-7A0959CB13E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04BE5182-8ED7-441B-A4D4-7A0959CB13E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04BE5182-8ED7-441B-A4D4-7A0959CB13E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA052BA1-27D4-44B8-BB13-02092D4E84A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA052BA1-27D4-44B8-BB13-02092D4E84A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA052BA1-27D4-44B8-BB13-02092D4E84A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA052BA1-27D4-44B8-BB13-02092D4E84A6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{C6228179-A61B-4EE6-A9F2-3612B12C15F4} = {60FFD1FF-FB61-42CF-9052-14B724736628}
-		{22DA9F9E-A84F-47EE-A870-3CC845812606} = {60FFD1FF-FB61-42CF-9052-14B724736628}
+		{C6228179-A61B-4EE6-A9F2-3612B12C15F4} = {5D95B2EF-B588-42B2-8EDC-497E759B2B65}
+		{22DA9F9E-A84F-47EE-A870-3CC845812606} = {5D95B2EF-B588-42B2-8EDC-497E759B2B65}
 		{5F99A0E7-A37D-472C-9013-D21A4A7C9AB6} = {60FFD1FF-FB61-42CF-9052-14B724736628}
 		{17FDCAF9-7999-48A4-A065-B6BA5B606865} = {60FFD1FF-FB61-42CF-9052-14B724736628}
-		{DC578DA0-1DCE-42C2-985D-ED0CEF11CA0C} = {60FFD1FF-FB61-42CF-9052-14B724736628}
+		{DC578DA0-1DCE-42C2-985D-ED0CEF11CA0C} = {5D95B2EF-B588-42B2-8EDC-497E759B2B65}
 		{46654E83-C704-47C5-883B-10AA4354394C} = {DC578DA0-1DCE-42C2-985D-ED0CEF11CA0C}
 		{EDD40025-A52A-488A-8D05-8E97E8A37591} = {DC578DA0-1DCE-42C2-985D-ED0CEF11CA0C}
 		{DB40D22A-D179-4B73-AFCD-A00809AA2B59} = {DC578DA0-1DCE-42C2-985D-ED0CEF11CA0C}
@@ -113,6 +133,12 @@ Global
 		{D71C6393-C71B-4844-B771-C7DDD04DA78D} = {83AB8E4B-58DF-42AE-A17F-B5D75ACEC1A2}
 		{63143873-C34B-4F8D-9A3B-54AADAC8BE4C} = {83AB8E4B-58DF-42AE-A17F-B5D75ACEC1A2}
 		{72547520-8574-4858-8A37-0B0266645B96} = {83AB8E4B-58DF-42AE-A17F-B5D75ACEC1A2}
+		{BC7E303F-2874-4D7F-9769-CA5241F66E2C} = {60FFD1FF-FB61-42CF-9052-14B724736628}
+		{04BE5182-8ED7-441B-A4D4-7A0959CB13E9} = {BC7E303F-2874-4D7F-9769-CA5241F66E2C}
+		{AA052BA1-27D4-44B8-BB13-02092D4E84A6} = {9735D7A0-9B4A-414E-8237-0F83510F021F}
+		{D4D0E63C-C037-479C-A98D-26EF49B7EFC0} = {9735D7A0-9B4A-414E-8237-0F83510F021F}
+		{5D95B2EF-B588-42B2-8EDC-497E759B2B65} = {60FFD1FF-FB61-42CF-9052-14B724736628}
+		{9735D7A0-9B4A-414E-8237-0F83510F021F} = {BC7E303F-2874-4D7F-9769-CA5241F66E2C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C26B0581-CA49-4A12-B46C-F8A602E89BBB}
@@ -120,7 +146,9 @@ Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		submodules\bam.core\submodules\bam.net.shared\bam.net.shared.projitems*{22da9f9e-a84f-47ee-a870-3cc845812606}*SharedItemsImports = 13
 		submodules\bamcli\submodules\bam.core\submodules\bam.net.shared\bam.net.shared.projitems*{63143873-c34b-4f8d-9a3b-54aadac8be4c}*SharedItemsImports = 13
+		submodules\bamserver\submodules\bam.core\submodules\bam.net.shared\bam.net.shared.projitems*{aa052ba1-27d4-44b8-bb13-02092d4e84a6}*SharedItemsImports = 5
 		submodules\bam.core\submodules\bam.net.shared\bam.net.shared.projitems*{c6228179-a61b-4ee6-a9f2-3612b12c15f4}*SharedItemsImports = 5
+		submodules\bamserver\submodules\bam.core\submodules\bam.net.shared\bam.net.shared.projitems*{d4d0e63c-c037-479c-a98d-26ef49b7efc0}*SharedItemsImports = 13
 		submodules\bamcli\submodules\bam.core\submodules\bam.net.shared\bam.net.shared.projitems*{d71c6393-c71b-4844-b771-c7ddd04da78d}*SharedItemsImports = 5
 	EndGlobalSection
 EndGlobal
