@@ -1,9 +1,8 @@
-using Bam.Net.Logging;
+﻿using Bam.Net.Logging;
 using Bam.Net.Testing;
 using System;
 using Bam.Net.CommandLine;
 using Bam.Shell;
-using Bam.Shell.CodeGen;
 using Bam.Shell.Data;
 
 namespace Bam.Net.Application
@@ -17,11 +16,11 @@ namespace Bam.Net.Application
             TryWritePid();
 
             IsolateMethodCalls = false;
-            
+
             BamEnvironmentVariables.SetBamVariable("ApplicationName", "bamdb");
-            
-            ArgumentAdder.AddArguments(args);
-            
+
+            //ArgumentAdder.AddArguments(args);
+
             ExecuteMainOrInteractive(args);
         }
     }
